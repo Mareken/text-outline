@@ -1,0 +1,57 @@
+@font-face
+  font-family: 'Neutro'
+  src: url('./assets/Neutro.otf')
+  
+*
+  box-sizing: border-box
+
+body
+  padding: 0
+  margin: 0
+  height: 100vh
+  overflow-x: hidden
+  font-family: 'Neutro'
+  background: #222
+  height: 2000px
+
+  &::-webkit-scrollbar
+    width: 8px
+
+  &::-webkit-scrollbar-track
+    background: #00ffff
+
+  &::-webkit-scrollbar-thumb
+    background: #ff0000
+
+.container
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  display: flex
+  width: 100%
+  align-items: center
+  justify-content: center
+  pointer-events: none
+  user-select: none
+  -webkit-user-select: none
+  *
+    position: absolute
+
+.top, .bottom
+  color: #fff
+  font-size: 3rem
+  min-width: 2000%
+  text-align: center
+  margin-top: -50px
+
+  &:nth-of-type(3), &:last-of-type
+    margin-top: 50px
+
+.top
+  z-index: 2
+  color: transparent
+  -webkit-text-stroke: 1px white
+
+.bottom
+  z-index: -1
